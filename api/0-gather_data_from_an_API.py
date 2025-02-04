@@ -21,11 +21,7 @@ completed_tasks = 0
 total_tasks = 0
 list_completed_tasks = []
 
-for u in user:
-    for k, v in u.items():
-        if k == "name":
-            employee_name = v
-            break
+employee_name = user[0]["name"]
 
 for task in todo:
     total_tasks += 1
