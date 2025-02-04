@@ -2,8 +2,9 @@
 # Author: Joana Casallas
 """REST API - getter data"""
 import csv
-import sys
 import requests
+import sys
+
 
 if len(sys.argv) < 2:
     print("missing the User_id")
