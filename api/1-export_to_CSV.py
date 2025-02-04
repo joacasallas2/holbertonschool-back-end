@@ -23,7 +23,7 @@ if r_user.status_code != 200 or not r_user.json():
     sys.exit(1)
 
 user = r_user.json()
-employee_name = user[0]["name"]
+username = user[0]["username"]
 
 url_todo = f"https://jsonplaceholder.typicode.com/todos?userId={userId}"
 r_todo = requests.get(url_todo)
@@ -39,4 +39,4 @@ with open(csv_filename, mode="w", encoding="utf-8") as file:
     writer = csv.writer(file, quoting=csv.QUOTE_ALL)
     for task in todo:
         writer.writerow(
-            [userId, employee_name, task["completed"], task["title"]])
+            [userId, username, task["completed"], task["title"]])
