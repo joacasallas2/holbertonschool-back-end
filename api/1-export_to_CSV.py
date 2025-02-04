@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 # Author: Joana Casallas
 """REST API - getter data"""
-import requests
-import sys
 import csv
+import sys
+import requests
 
 if len(sys.argv) < 2:
     print("missing the User_id")
